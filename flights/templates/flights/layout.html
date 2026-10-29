@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Airline{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'flights:index' %}">Vols</a>
+        |
+        <a href="{% url 'flights:passengers' %}">Passagers</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
